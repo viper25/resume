@@ -1,0 +1,52 @@
+/*! Figured out how to use Collapse from Bootstrap without importing bootstrap.css using 
+https://jsfiddle.net/viper25/zzc3pafx/3/
+http://www.w3schools.com/bootstrap/bootstrap_collapse.asp
+http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css
+*/
+
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+
+a { padding: 5px; }
+ 
+  /* unvisited link */
+ a:link {
+   color: DimGray;
+   /*To remove the underline*/
+   text-decoration: none;
+   text-shadow: 0 0 1px #999;
+ }
+ 
+ /* visited link */
+  a:visited {
+   color: DimGray;
+   text-decoration: none;
+ }
+ 
+ /* mouse over link */
+  a:hover {
+    background-color: LightGray;
+ }
+ /* selected link */
+ 
+ a:active {
+    padding-top: 2px;
+ }
