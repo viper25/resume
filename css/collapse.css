@@ -1,7 +1,8 @@
 /*! Figured out how to use Collapse from Bootstrap without importing bootstrap.css using 
 https://jsfiddle.net/viper25/zzc3pafx/3/
 http://www.w3schools.com/bootstrap/bootstrap_collapse.asp
-http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css
+http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.css
+Upgrading to 4.3.1 version of bootstrap.min.js breaks this
 */
 
 .collapse {
