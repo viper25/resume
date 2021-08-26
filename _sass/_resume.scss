@@ -138,12 +138,14 @@
     font-size: 1.5rem;
     letter-spacing: -.05rem;
     line-height: 1;
+    color: rgb(11, 35, 116);
   }
 
   .resume-item-details {
     font-size: 1.125rem;
     margin: 0 0 .75rem;
     line-height: 1;
+    color: rgb(19, 58, 184);
   }
 
   .resume-item-title,
@@ -162,7 +164,11 @@
     }
   }
 
-  .resume-item-copy { margin: .75rem 0 0; }
+  .resume-item-copy,
+  p { 
+    margin: .75rem 0 0; 
+    text-align: justify;
+  }
 }
 
 // footer styles
