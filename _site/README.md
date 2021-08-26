@@ -12,6 +12,14 @@ To test locally, run the following in your terminal:
     bundle exec jekyll serve
     Open your browser to localhost:4000
 
-## Deploy
+## Running locally (Windows)
 
-The static files are generated at `_site` folder. Copy and deploy to Azure Static Sites per this [doc](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions)
+### Setup Jekyll on Windows
+[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/ "Run Jekyll on Windows") 
+Navigate to the Git folder and run:
+D:\Ruby23-x64\bin\jekyll.bat 
+
+### Run
+See https://jekyllrb.com/docs/usage/
+
+

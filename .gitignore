@@ -1,6 +1,5 @@
 .project
 # Generated Site
-/_site/
 /.sass-cache/
 .DS_Store
 .jekyll-cache
