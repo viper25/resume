@@ -1,6 +1,8 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/viper25/resume/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/viper25/resume?targetFile=Gemfile.lock)
 
-Generated using  [Jekyll](https://github.com/jekyll/jekyll), a popular static site generator. Also see [Jekyll GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/ "Jekyll & GitHub Pages") 
+Generated using  [Jekyll](https://github.com/jekyll/jekyll), a popular static site generator. Also see [Jekyll GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/ "Jekyll & GitHub Pages")
+
+Seems to work with only Ruby+Devkit 2.7.X (x64) installer. It provides the biggest number of compatible gems and installs the MSYS2 Devkit alongside Ruby. 
 
 ## Running locally (Linux)
 To test locally, run the following in your terminal:
