@@ -1,4 +1,5 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/viper25/resume/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/viper25/resume?targetFile=Gemfile.lock)
+[![Deploy](https://github.com/viper25/resume/actions/workflows/azure_static.yml/badge.svg)](https://github.com/viper25/resume/actions/workflows/azure_static.yml)
 
 Generated using  [Jekyll](https://github.com/jekyll/jekyll), a popular static site generator. Also see [Jekyll GitHub Pages](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/ "Jekyll & GitHub Pages")
 
