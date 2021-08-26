@@ -1,0 +1,38 @@
+name: Blob storage website CI
+
+on:
+    push:
+        branches: [ master ]
+    pull_request:
+        branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:            
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+            az storage blob upload-batch --account-name <STORAGE_ACCOUNT_NAME> -d '$web' -s .
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/_site" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
+
+  # Azure logout 
+    - name: logout
+      run: |
+            az logout
+      if: always()
+
+       
+      az ad sp create-for-rbac --name vjkstaticsites --role contributor --scopes /subscriptions/209e6ee4-2312-4fd4-a3c6-d7a61024f851/resourceGroups/VJK-Personal --sdk-auth
