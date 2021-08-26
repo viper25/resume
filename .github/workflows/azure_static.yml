@@ -33,6 +33,3 @@ jobs:
       run: |
             az logout
       if: always()
-
-       
-      az ad sp create-for-rbac --name vjkstaticsites --role contributor --scopes /subscriptions/209e6ee4-2312-4fd4-a3c6-d7a61024f851/resourceGroups/VJK-Personal --sdk-auth
