@@ -1,4 +1,4 @@
-name: Blob storage website CI
+name: Upload to Azure Storage website
 
 on:
     push:
@@ -20,7 +20,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload-batch --account-name vjkstaticsites -d '$web' -s .
+            az storage blob upload-batch --account-name vjkstaticsites -d '$web' -s ./_site
 
   # Azure logout 
     - name: logout
