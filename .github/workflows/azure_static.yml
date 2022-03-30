@@ -23,7 +23,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-               az cdn endpoint purge --content-paths  "/*" --profile-name "vjk-cdn" --name "vjk-resume" --resource-group "VJK-Personal"
+               az cdn endpoint purge --content-paths  "/*" --profile-name "vjk-cdn" --name "vjk-resume" --resource-group "VJK-Personal" --no-wait
             
 
   # Azure logout 
