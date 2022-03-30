@@ -3,8 +3,6 @@ name: Deploy to Azure Storage
 on:
     push:
         branches: [ master ]
-    pull_request:
-        branches: [ master ]
 
 jobs:
   build:
@@ -18,10 +16,15 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
         inlineScript: |
             az storage blob delete-batch --account-name vjkstaticsites --source '$web'
-            az storage blob upload-batch --account-name vjkstaticsites --destination '$web' --source ./_site/            
+            az storage blob upload-batch --account-name vjkstaticsites --auth-mode key --destination '$web' --source ./_site/
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+               az cdn endpoint purge --content-paths  "/*" --profile-name "vjk-cdn" --name "vjk-resume" --resource-group "VJK-Personal"
+            
 
   # Azure logout 
     - name: logout

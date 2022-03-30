@@ -13,6 +13,16 @@ To test locally, run the following in your terminal:
     bundle exec jekyll serve
     Open your browser to localhost:4000
 
+## Running locally (Windows)
+Ensure `C:\Ruby27-x64` is present. At time of writing working version was `ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]` 
+
+At present this runs on a new Windows installation (Azure `win01` server) by following default instructions:
+
+```dos
+bundle install
+bundle exec jekyll serve
+```
+
 ## Deploy
 
 The static files are generated at `_site` folder. Copy and deploy to Azure Static Sites per this [doc](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions)
