@@ -25,4 +25,16 @@ bundle exec jekyll serve
 
 ## Deploy
 
-The static files are generated at `_site` folder. Copy and deploy to Azure Static Sites per this [doc](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions)
+* The static files are generated at `_site` folder. 
+
+* The GitHub workflow will automatically deploy to [Azure Static Sites](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions). This is fronted by Azure CDN.
+
+| Type | Name |Content|
+| ---- | ---------- |--|
+| CNAME | resume | vjk-resume.azureedge.net|
+
+* Or [Cloudflare](https://developers.cloudflare.com/pages/framework-guides/deploy-a-jekyll-site/). Each GitHub build will be deployed by Cloudflare as a Jekyll site.
+
+| Type | Name |Content|
+| ---- | ---------- |--|
+| CNAME | resume | resume-8l5.pages.dev|
